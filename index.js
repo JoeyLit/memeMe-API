@@ -7,6 +7,7 @@ const	app = express()
 const	mysql = require('mysql')
 const	bodyParser=require("body-parser")
 const connection = require('./config/database')
+var cors = require('cors')
 
 const helmet = require('helmet')
 
@@ -49,6 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/images/upload_images')));
 app.use(fileUpload());
 app.use(express.json());
+app.use(cors())
 
 // set security header
 app.use(helmet());
