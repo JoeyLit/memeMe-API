@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>memeMe API</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container col-sm-12" id="mainform">
+        <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                                     
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">MEME UPLOAD FORM</div>
+                </div> 
+                <div class="panel-body" >
+                    <form class="form-horizontal" role="form" method="post" action="/" enctype="multipart/form-data">
+                        <% if (message.length > 0) { %>
+                            <div class="alert alert-success col-sm-12"><%= message %></div>
+                        <% } %>
+                        <div id="signupalert" style="display:none" class="alert alert-danger">
+                            <p>Error:</p>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="meme_category" class="col-md-3 control-label">Category</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="meme_category" placeholder="Category">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="meme_description" class="col-md-3 control-label">Description</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="meme_description" placeholder="Description">
+                            </div>
+                        </div>
+                                                                                        <div class="form-group">
+                            <label for="meme_tag1" class="col-md-3 control-label">Tag 1</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="meme_tag1" placeholder="Tag1">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="meme_tag2" class="col-md-3 control-label">Tag 2</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="meme_tag2" placeholder="tag2">
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label for="meme_tag3" class="col-md-3 control-label">Tag 3</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="meme_tag3" placeholder="tag3">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="image" class="col-md-3 control-label">Meme Image</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" name="meme_image" accept=""/>
+                            </div>
+                        </div>                                
+                        <div class="form-group">
+                            <label for="meme-type" class="col-md-3 control-label">Type of Meme</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="meme_type" placeholder="Type of Meme">
+                            </div>
+                        </div>
+                      
+                        <div class="form-group">
+                            <!-- Button -->                                       
+                            <div class="col-md-offset-3 col-md-9">
+                                <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Upload</button>
+                            </div>
+                        </div>  
+                    </form>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
