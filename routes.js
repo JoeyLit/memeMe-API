@@ -1,4 +1,4 @@
-const hostName = 'localhost:8080';
+const hostName = 'mememe-api.herokuapp.com';
 
 exports.index = function(req, res){
     message = '';
