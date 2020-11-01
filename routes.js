@@ -17,7 +17,7 @@ exports.index = function(req, res){
 		var file = req.files.meme_image;
       var img_name=file.name;
       var addDate = Date.now();
-      var url = `http://www.`+`${hostName}`+`/${addDate}_${file.name}`
+      var url = `https://www.`+`${hostName}`+`/${addDate}_${file.name}`
       ;
 
 	  	 if(file.mimetype == "image/jpeg" ||file.mimetype == "image/png"||file.mimetype == "image/gif" ){
