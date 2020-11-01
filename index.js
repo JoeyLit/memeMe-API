@@ -82,6 +82,6 @@ app.use('/api-memetype', memeTypeRoutes);
 
 
 //Connecting to server
-app.listen(8080, ()=>{
+app.listen(process.env.PORT || 8080, ()=>{
 	console.log('app running on port 8080')
 });
